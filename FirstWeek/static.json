@@ -5,11 +5,11 @@
     {
       "/login/"
       {
-        "login"
+        
       }
       "/sample/"
       {
-        "sample"
+        
       }
       "Content-Type": "text/plain; charset=UTF-8",
       "X-Author": "1fromhell1",
