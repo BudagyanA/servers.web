@@ -6,7 +6,7 @@
     "/*":
     {
       "X-Author": "1fromhell1",
-    }
+    },
     "routes":
     {
       "/login/": "/login.txt",
