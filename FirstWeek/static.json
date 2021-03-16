@@ -1,16 +1,16 @@
 {
   "headers":
   {
+    "Content-Type": "text/plain; charset=UTF-8",
+    "Access-Control-Allow-Origin":"*",
     "/*":
     {
-      "Content-Type": "text/plain; charset=UTF-8",
       "X-Author": "1fromhell1",
-      "Access-Control-Allow-Origin":"*",
-      "routes": 
-      {
-        "/login/": "/login.txt",
-        "/sample/": "/sample.txt"
-      }
+    }
+    "routes":
+    {
+      "/login/": "/login.txt",
+      "/sample/": "/sample.txt"
     }
   }
 }
