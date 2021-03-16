@@ -5,7 +5,7 @@
     "Access-Control-Allow-Origin":"*",
     "/*":
     {
-      "X-Author": "1fromhell1",
+      "X-Author": "1fromhell1"
     },
     "routes":
     {
