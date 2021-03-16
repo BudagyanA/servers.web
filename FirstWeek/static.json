@@ -5,7 +5,7 @@
     {
       "X-Author": "1fromhell1",
       "Content-Type": "text/plain; charset=UTF-8",
-      "Access-Control-Allow-Origin":"*",
+      "Access-Control-Allow-Origin":"*"
     },
     "/login/": {
       "Access-Control-Allow-Origin": "*"
