@@ -1,19 +1,21 @@
 {
-  "headers":
-  {
-    "/*":
-    {
-      "X-Author": "1fromhell1",
-      "Content-Type": "text/plain; charset=UTF-8",
-      "Access-Control-Allow-Origin":"*"
-    },
-    "/login/": {
+  "routes": {
+    "/login/": "/login.html",
+    "/sample/": "/sample.html"
+  },
+
+  "headers": {
+    "/*": {
+      "X-Author": 1fromhell1,
       "Access-Control-Allow-Origin": "*"
     },
-    "routes":
-    {
-      "/login/": "/login.txt",
-      "/sample/": "/sample.txt"
+    "/login/": {
+      "Content-Type": "text/plain; charset=UTF-8",
+      "Access-Control-Allow-Origin": "*"
+    },
+    "/sample/": {
+      "Content-Type": "text/plain",
+      "Access-Control-Allow-Origin": "*"
     }
   }
 }
