@@ -21,10 +21,10 @@ export default (express, bodyParser, fs, crypto, http) => {
         fs.createReadStream("./app.js").pipe(res);
     })
 
-    .all('/sha1/:input', (req, res) => {
-        const hash = crypto.createHmac('sha1', req.params['input'])
-        .digest('hex');
-        res.end(String(hash))
+ .get('/sha1/:input', r => {
+        const shasum = crypto.createHash('sha1');
+        shasum.update(r.params.input);
+        r.res.send(shasum.digest('hex')); 
     })
 
     .get('/req/', (req, res) => {
