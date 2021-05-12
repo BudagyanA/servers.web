@@ -1,4 +1,4 @@
-  export default m => {
+export default m => {
     const UserSchema = m.Schema({
         login: String,
         password: String
