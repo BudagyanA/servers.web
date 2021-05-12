@@ -1,7 +1,7 @@
 {
   "routes": {
     "/login/": "/login.txt",
-    "/sample/": "/sample.txt"
+    "/sample/": "/sample.txt",
     "/promise/": "/promise.txt",
     "/fetch/": "/fetch.html"
   },
@@ -16,7 +16,7 @@
     },
     "/sample/": {
       "Access-Control-Allow-Origin": "*"
-    }
+    },
     "/promise/": {
       "Access-Control-Allow-Origin": "*"
     },
