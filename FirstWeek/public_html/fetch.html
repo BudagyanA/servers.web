@@ -1,0 +1,9 @@
+<input id="inp">
+<button id="bt">Send</button>
+<script>
+  document.querySelector("#bt").onclick = (async function(){
+    let url = document.querySelector("#inp").value;
+    response = await fetch(url);
+    document.querySelector("#inp").value = await response.text();
+  });
+</script>
