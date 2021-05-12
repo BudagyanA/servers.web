@@ -1,29 +1,10 @@
-const CORS = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-  'Access-Control-Allow-Headers': 'x-test, Content-Type, Accept, Access-Control-Allow-Headers'
-};
+import express from "express"
+import bodyParser from "body-parser"
+import fs from "fs"
+import crypto from "crypto"
+import http from "http"
+import appSrc from "./app.js"
 
-const s = require('http').Server((req, res) => {
-  if (req.url === '/result4/') {
-    let header = req.headers["x-test"];
+const app = appSrc(express, bodyParser, fs, crypto, http);
 
-    let result = new Object();
-    result.message = '1fromhell1';
-    result["x-result"] = header;
-    let body = "";
-
-    req
-      .on("data", (data) => (body += data))
-      .on("end", () => {
-        result["x-body"] = body;
-        res.writeHead(200, {...CORS, "Content-Type": "application/json" });
-        res.end(JSON.stringify(result));
-    });
-  }
-
-  else {
-    res.end('Oh no');
-  }
-});
-s.listen(process.env.PORT);
+app.listen(process.env.PORT)
