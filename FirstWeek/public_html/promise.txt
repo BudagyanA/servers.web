@@ -1,5 +1,0 @@
-function task(x){
-  return new Promise(function(res, rej){
-    (x < 18) ? res("yes") : rej("no");
-  })
-}
