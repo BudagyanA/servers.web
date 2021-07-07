@@ -45,17 +45,7 @@ export default (express, bodyParser, createReadStream, writeFileSync, crypto, ht
             })
         })
     })
-
-    .get('/wordpress/*', (req, res) => {
-        console.log('http://j5503695.myjino.ru/wordpress/'+req.params[0]);
-        res.header('Content-Type', 'application/json');
-        void http.get('http://j5503695.myjino.ru/wordpress/'+req.params[0], (r, buffer='') => {
-            r
-            .on('data', data => buffer += data)
-            .on('end', () => res.send(buffer));
-        });
-    })
-
+    
     .get('/test/', urlencodedParser, async (req, res) => {
 
         const browser = await puppeteer.launch({args: [
